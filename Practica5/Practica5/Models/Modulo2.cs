@@ -14,7 +14,7 @@ namespace Practica5.Models
     
     public partial class Modulo2
     {
-        public string IDEvento { get; set; }
+        public int IDEvento { get; set; }
         public string Evento { get; set; }
         public Nullable<System.TimeSpan> FechaHora { get; set; }
     }

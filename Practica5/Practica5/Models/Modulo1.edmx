@@ -4,30 +4,32 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Practica5Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Practica5Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Modulo1">
           <Key>
-            <PropertyRef Name="Celular" />
+            <PropertyRef Name="IDM1" />
           </Key>
+          <Property Name="IDM1" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
-          <Property Name="Celular" Type="int" Nullable="false" />
+          <Property Name="Celular" Type="int" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Direccion" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityContainer Name="Practica5ModelStoreContainer">
+        <EntityContainer Name="Practica5Model1StoreContainer">
           <EntitySet Name="Modulo1" EntityType="Self.Modulo1" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Practica5Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Practica5Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Modulo1">
           <Key>
-            <PropertyRef Name="Celular" />
+            <PropertyRef Name="IDM1" />
           </Key>
+          <Property Name="IDM1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Celular" Type="Int32" Nullable="false" />
+          <Property Name="Celular" Type="Int32" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -39,10 +41,11 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Practica5ModelStoreContainer" CdmEntityContainer="Practica5Modulo1">
+        <EntityContainerMapping StorageEntityContainer="Practica5Model1StoreContainer" CdmEntityContainer="Practica5Modulo1">
           <EntitySetMapping Name="Modulo1">
-            <EntityTypeMapping TypeName="Practica5Model.Modulo1">
+            <EntityTypeMapping TypeName="Practica5Model1.Modulo1">
               <MappingFragment StoreEntitySet="Modulo1">
+                <ScalarProperty Name="IDM1" ColumnName="IDM1" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Celular" ColumnName="Celular" />
                 <ScalarProperty Name="Email" ColumnName="Email" />

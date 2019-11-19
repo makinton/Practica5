@@ -14,8 +14,9 @@ namespace Practica5.Models
     
     public partial class Modulo1
     {
+        public int IDM1 { get; set; }
         public string Nombre { get; set; }
-        public int Celular { get; set; }
+        public Nullable<int> Celular { get; set; }
         public string Email { get; set; }
         public string Direccion { get; set; }
     }

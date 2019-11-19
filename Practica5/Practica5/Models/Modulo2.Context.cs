@@ -13,10 +13,10 @@ namespace Practica5.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Practica5Entities : DbContext
+    public partial class Practica5Modulo2 : DbContext
     {
-        public Practica5Entities()
-            : base("name=Practica5Entities")
+        public Practica5Modulo2()
+            : base("name=Practica5Modulo2")
         {
         }
     
