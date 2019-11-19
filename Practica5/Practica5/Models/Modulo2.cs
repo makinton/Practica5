@@ -16,6 +16,6 @@ namespace Practica5.Models
     {
         public int IDEvento { get; set; }
         public string Evento { get; set; }
-        public Nullable<System.TimeSpan> FechaHora { get; set; }
+        public Nullable<System.DateTime> FechaHora { get; set; }
     }
 }
